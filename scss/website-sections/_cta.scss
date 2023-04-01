@@ -1,0 +1,30 @@
+@use '../general-styles/colors' as clrs;
+@use '../general-styles/typography' as type;
+@use '../general-styles/padding' as pad;
+@use '../general-styles/gradients' as grad;
+
+.cta {
+  background-image: grad.gradient('primary'),
+    url('../images/call-action/call-bg.jpg');
+
+  &__mini-title,
+  &__title,
+  &__para {
+    color: #fff;
+  }
+
+  &__mini-title {
+    font-size: type.font-size-st('sc');
+    padding: pad.padding-st-v('s') calc(pad.padding-st-v('l') + 1.2rem);
+    border: 2px solid #fff;
+    border-radius: 1.2rem;
+  }
+
+  &__link {
+    background-color: clrs.color-theme('3');
+
+    &:hover {
+      background-color: clrs.color-theme('2');
+    }
+  }
+}

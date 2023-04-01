@@ -35,6 +35,10 @@
 
     &--cta {
       background-color: clrs.color-link('3');
+
+      &:hover {
+        background-color: clrs.color-link('2');
+      }
     }
   }
 
@@ -61,6 +65,10 @@
 
     &--cta {
       background-color: clrs.color-theme('2');
+
+      &:hover {
+        background-color: clrs.color-link('3');
+      }
     }
   }
 }
