@@ -14,6 +14,7 @@
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
+  background-color: hsl(216, 33%, 97%);
 }
 
 a,
@@ -111,7 +112,7 @@ span {
 .responsive-grid {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min-content, 25rem));
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 30rem));
   place-content: center;
   gap: 2rem;
 }
@@ -245,6 +246,7 @@ span {
 
 .about {
   display: flex;
+  align-items: center;
   gap: 5rem;
   background-image: url("../images/about/about-bg.png");
   background-color: hsl(238, 50%, 13%);
@@ -272,6 +274,75 @@ span {
   padding: 1rem;
   background-color: hsl(327, 97%, 48%);
   border-radius: 50%;
+}
+
+.speakers__container--speaker {
+  border-radius: 0.8rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: min-content 2rem repeat(2, min-content);
+  position: relative;
+}
+.speakers__container--speaker__image {
+  grid-column: 1/-1;
+}
+.speakers__container--speaker__name {
+  grid-row: 3/4;
+  cursor: pointer;
+  color: hsl(327, 97%, 48%);
+}
+.speakers__container--speaker__role {
+  grid-row: 4/5;
+}
+.speakers__container--speaker__name, .speakers__container--speaker__role {
+  grid-column: 2/-1;
+}
+.speakers__container--speaker__social {
+  opacity: 0.7;
+  position: absolute;
+  display: flex;
+  gap: 0.8rem;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.speakers__container--speaker__social i {
+  color: #fff;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.speakers__container--speaker__social i:nth-child(1) {
+  background-color: hsl(221, 44%, 42%);
+}
+.speakers__container--speaker__social i:nth-child(2) {
+  background-color: hsl(206, 82%, 63%);
+}
+.speakers__container--speaker__social i:nth-child(3) {
+  background-color: hsl(329, 100%, 50%);
+}
+.speakers__container--speaker__social i:nth-child(4) {
+  background-color: hsl(201, 100%, 35%);
+}
+@media (hover) {
+  .speakers__container--speaker__social {
+    transform: translateX(-35rem);
+    transition: 0.5s all ease-in-out;
+  }
+  .speakers__container--speaker:hover .speakers__container--speaker__social {
+    transform: translateX(-50%);
+    transition: 0.5s all ease-in-out;
+  }
+  .speakers__container--speaker__name {
+    color: hsl(238, 50%, 13%);
+    transition: all 0.5s ease-in-out;
+  }
+  .speakers__container--speaker:hover .speakers__container--speaker__name {
+    color: hsl(327, 97%, 48%);
+    transition: all 0.5s ease-in-out;
+  }
 }
 
 @media screen and (max-width: 1100px) {

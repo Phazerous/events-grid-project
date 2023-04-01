@@ -1,6 +1,9 @@
+@use '../general-styles/colors' as clrs;
+
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.5;
+  background-color: clrs.color-theme('1');
 }
 
 a,
