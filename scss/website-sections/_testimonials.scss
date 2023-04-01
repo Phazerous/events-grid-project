@@ -1,0 +1,53 @@
+@use '../general-styles/colors' as clrs;
+@use '../general-styles/typography' as type;
+@use '../general-styles/padding' as pad;
+
+.testimonials {
+  &__container {
+    &--testimonial {
+      padding: pad.padding-st-h('l');
+      background-color: #fff;
+      border-radius: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      &__info {
+        display: flex;
+        align-items: center;
+        column-gap: 1.2rem;
+
+        &--image {
+          border-radius: 50%;
+          overflow: hidden;
+          height: 10rem;
+          width: 10rem;
+        }
+
+        & > div {
+          display: flex;
+          flex-direction: column;
+          gap: 0.8rem;
+
+          & > div {
+            color: orange;
+          }
+        }
+
+        &--name {
+          &:hover {
+            color: clrs.color-type('3');
+            transition: all 0.25s ease-in-out;
+          }
+
+          cursor: pointer;
+          transition: all 0.25s ease-in-out;
+        }
+
+        &--role {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

@@ -8,7 +8,7 @@
   &__days {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 0.4rem;
     place-content: center;
 
@@ -60,7 +60,9 @@
     padding: pad.padding-st-v('m');
 
     width: 100%;
+    gap: 2rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 
