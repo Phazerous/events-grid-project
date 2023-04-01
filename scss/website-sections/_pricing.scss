@@ -1,0 +1,112 @@
+@use '../general-styles/colors' as clrs;
+@use '../general-styles/typography' as type;
+@use '../general-styles/padding' as pad;
+@use '../general-styles/gradients' as grad;
+
+.pricing {
+  background-image: grad.gradient('primary'),
+    url('../images/pricing/pricing-bg.jpg');
+
+  &__title,
+  &__para,
+  &__mini-title {
+    color: clrs.color-type('1');
+  }
+
+  &__mini-title::before,
+  &__mini-title::after {
+    background-color: clrs.color-type('1');
+  }
+
+  &__content {
+    &--plan {
+      &:hover {
+        transform: translateY(-10%);
+        transition: all 0.3s ease-in-out;
+      }
+
+      border-radius: 0.8rem;
+      padding: calc(pad.padding-st-h('l') + 2rem);
+      background-color: white;
+
+      transition: all 0.3s ease-in-out;
+
+      display: flex;
+      flex-direction: column;
+      row-gap: 2rem;
+      align-items: center;
+
+      &:nth-child(2) &__type {
+        color: clrs.color-type('3');
+        border-color: clrs.color-type('3');
+      }
+
+      &__type {
+        font-size: type.font-size-st('sc');
+        padding: 0.5rem pad.padding-st-v('m');
+        border-radius: 3rem;
+        border: 2px solid clrs.color-type('4');
+      }
+
+      &__subtitle {
+        margin-bottom: 0;
+        color: clrs.color-type('5');
+      }
+
+      &:nth-child(2n + 1) &__ticket {
+        background-color: clrs.color-theme('3');
+
+        &:hover {
+          background-color: clrs.color-theme('2');
+        }
+      }
+
+      &:nth-child(2n) &__ticket {
+        background-color: clrs.color-theme('2');
+
+        &:hover {
+          background-color: clrs.color-theme('3');
+        }
+      }
+
+      &__ticket {
+        position: relative;
+
+        &::before,
+        &::after {
+          position: absolute;
+          content: '';
+
+          width: 2rem;
+          height: 2rem;
+          border-radius: 50%;
+          background-color: #fff;
+
+          top: 50%;
+        }
+
+        &::before {
+          left: 0;
+          transform: translateY(-50%) translateX(-50%);
+        }
+
+        &::after {
+          right: 0;
+          transform: translateY(-50%) translateX(50%);
+        }
+      }
+
+      &__desc {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.7rem;
+        align-items: center;
+
+        li {
+          font-size: 1.2rem;
+          color: clrs.color-type('5');
+        }
+      }
+    }
+  }
+}

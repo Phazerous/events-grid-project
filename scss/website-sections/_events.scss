@@ -1,0 +1,128 @@
+@use '../general-styles/colors' as clrs;
+@use '../general-styles/typography' as type;
+@use '../general-styles/padding' as pad;
+
+.events {
+  padding-top: 0;
+
+  &__days {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 0.4rem;
+    place-content: center;
+
+    &--day {
+      padding: pad.padding-st-v('xl') 0;
+      border-bottom: 3px solid transparent;
+      border-radius: 0.8rem;
+
+      text-align: center;
+      background-color: #fff;
+      transition: all 0.3s ease-in-out;
+
+      &.current {
+        color: clrs.color-type('1');
+
+        h4 {
+          color: clrs.color-type('1');
+        }
+
+        background-color: clrs.color-theme('3');
+      }
+
+      &__title {
+        font-size: type.font-size-st('m');
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+      }
+
+      &:hover:not(&.current) &__title {
+        color: clrs.color-type('3');
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover:not(&.current) {
+        border-bottom: 3px solid clrs.color-type('3');
+        transition: all 0.3s ease-in-out;
+      }
+
+      &__subtitle {
+        font-size: type.font-size-st('sc');
+        color: clrs.color-type('5');
+      }
+    }
+  }
+
+  &__timing {
+    background-color: #fff;
+
+    padding: pad.padding-st-v('m');
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--date-time {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      &__date {
+        font-size: type.font-size-st('l');
+      }
+
+      &__month {
+        font-size: type.font-size-st('m');
+        font-weight: type.font-weight('regular');
+      }
+
+      &__time {
+        color: clrs.color-type('5');
+        font-size: 1.2rem;
+      }
+    }
+
+    &--desc {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+
+      &__image {
+        border-radius: 50%;
+        overflow: hidden;
+        width: 6rem;
+        height: 6rem;
+      }
+
+      & div {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+
+        p {
+          display: flex;
+          column-gap: 0.4rem;
+
+          span {
+            font-size: type.font-size-st('s');
+          }
+
+          i {
+            font-size: type.font-size-st('sc');
+            color: clrs.color-type('3');
+          }
+        }
+      }
+    }
+
+    &--more {
+      background-color: clrs.color-theme('3');
+
+      &:hover {
+        background-color: clrs.color-theme('2');
+      }
+    }
+  }
+}
