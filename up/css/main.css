@@ -714,6 +714,92 @@ span {
   text-align: center;
 }
 
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+.footer__social, .footer__quick-links, .footer__explore, .footer__news-letter {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.footer__social--logo {
+  width: 18rem;
+}
+.footer__social--logo img {
+  object-fit: contain;
+}
+.footer__social--para {
+  color: hsl(0, 0%, 45%);
+  margin-bottom: 0;
+}
+.footer__social div:last-child {
+  display: flex;
+  column-gap: 0.4rem;
+}
+.footer__social div:last-child i {
+  padding: 1rem 2rem;
+  background-color: hsl(238, 50%, 13%);
+  font-size: 1.5rem;
+  border-radius: 0.8rem;
+  color: #fff;
+}
+.footer__social div:last-child i:hover {
+  background-color: hsl(327, 97%, 48%);
+  transition: all 0.25s ease-in-out;
+}
+.footer__quick-links--title, .footer__explore--title {
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+}
+.footer__quick-links--title:hover, .footer__explore--title:hover {
+  color: hsl(327, 97%, 48%);
+  transition: all 0.25s ease-in-out;
+}
+.footer__quick-links--links, .footer__explore--links {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  font-size: 1.5rem;
+}
+.footer__quick-links--links a, .footer__explore--links a {
+  color: hsl(238, 50%, 13%);
+}
+.footer__quick-links--links a:hover, .footer__explore--links a:hover {
+  color: hsl(327, 97%, 48%);
+}
+.footer__social {
+  flex-basis: 35%;
+}
+.footer__quick-links {
+  flex-basis: 10%;
+}
+.footer__explore {
+  flex-basis: 10%;
+}
+.footer__news-letter {
+  flex-basis: 35%;
+}
+.footer__news-letter--title {
+  font-size: 2rem;
+}
+.footer__news-letter input[type=text] {
+  border: 1px solid hsl(0, 0%, 45%);
+  padding: 1.5rem;
+}
+.footer__news-letter input[type=button] {
+  color: #fff;
+  padding: 1.5rem;
+  background-color: hsl(327, 97%, 48%);
+  transition: all 0.25s ease-in-out;
+}
+.footer__news-letter input[type=button]:hover {
+  background-color: hsl(253, 82%, 42%);
+  transition: all 0.25s ease-in-out;
+}
+
 @media screen and (max-width: 1100px) {
   .header__nav--links {
     flex-basis: 100%;
@@ -754,6 +840,9 @@ span {
   .header__nav--burger__line:first-child {
     align-self: flex-end;
     width: 70%;
+  }
+  .footer {
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 900px) {

@@ -1,0 +1,119 @@
+@use '../general-styles/colors' as clrs;
+@use '../general-styles/typography' as type;
+@use '../general-styles/padding' as pad;
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  // flex-wrap: wrap;
+
+  &__social,
+  &__quick-links,
+  &__explore,
+  &__news-letter {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__social {
+    &--logo {
+      width: 18rem;
+
+      & img {
+        object-fit: contain;
+      }
+    }
+
+    &--para {
+      color: clrs.color-type('5');
+      margin-bottom: 0;
+    }
+
+    & div:last-child {
+      display: flex;
+      column-gap: 0.4rem;
+
+      i {
+        padding: pad.padding-st-v('s') pad.padding-st-h('s');
+        background-color: clrs.color-type('2');
+        font-size: type.font-size-st('sc');
+        border-radius: 0.8rem;
+        color: #fff;
+
+        &:hover {
+          background-color: clrs.color-type('3');
+          transition: all 0.25s ease-in-out;
+        }
+      }
+    }
+  }
+
+  &__quick-links,
+  &__explore {
+    &--title {
+      transition: all 0.25s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        color: clrs.color-type('3');
+        transition: all 0.25s ease-in-out;
+      }
+    }
+
+    &--links {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+
+      font-size: type.font-size-st('sc');
+
+      & a {
+        color: clrs.color-type('2');
+
+        &:hover {
+          color: clrs.color-type('3');
+        }
+      }
+    }
+  }
+
+  &__social {
+    flex-basis: 35%;
+  }
+
+  &__quick-links {
+    flex-basis: 10%;
+  }
+
+  &__explore {
+    flex-basis: 10%;
+  }
+
+  &__news-letter {
+    flex-basis: 35%;
+
+    &--title {
+      font-size: type.font-size-st('m');
+    }
+
+    & input[type='text'] {
+      border: 1px solid clrs.color-type('5');
+      padding: pad.padding-st-v('m');
+    }
+
+    & input[type='button'] {
+      color: #fff;
+      padding: pad.padding-st-v('m');
+      background-color: clrs.color-theme('2');
+      transition: all 0.25s ease-in-out;
+
+      &:hover {
+        background-color: clrs.color-theme('3');
+        transition: all 0.25s ease-in-out;
+      }
+    }
+  }
+}
