@@ -1,8 +1,22 @@
 @use '../general-styles/colors' as clrs;
 @use '../general-styles/typography' as type;
 @use '../general-styles/padding' as pad;
+@use '../general-styles/gradients' as grad;
 
 .testimonials {
+  background-image: grad.gradient('primary');
+
+  &__mini-title,
+  &__title,
+  &__para {
+    color: #fff;
+  }
+
+  &__mini-title::before,
+  &__mini-title::after {
+    background-color: #fff;
+  }
+
   &__container {
     &--testimonial {
       padding: pad.padding-st-h('l');

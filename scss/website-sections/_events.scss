@@ -55,6 +55,7 @@
   }
 
   &__timing {
+    border-radius: 0.8rem;
     background-color: #fff;
 
     padding: pad.padding-st-v('m');
@@ -65,6 +66,13 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    border-left: 3px solid transparent;
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+      border-color: clrs.color-type('3');
+      transition: all 0.25s ease-in-out;
+    }
 
     &--date-time {
       display: flex;

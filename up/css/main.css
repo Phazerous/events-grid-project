@@ -329,7 +329,7 @@ span {
 }
 @media (hover) {
   .speakers__container--speaker__social {
-    transform: translateX(-35rem);
+    transform: translateX(-40rem);
     transition: 0.5s all ease-in-out;
   }
   .speakers__container--speaker:hover .speakers__container--speaker__social {
@@ -389,6 +389,7 @@ span {
   color: hsl(0, 0%, 45%);
 }
 .events__timing {
+  border-radius: 0.8rem;
   background-color: #fff;
   padding: 1.5rem;
   width: 100%;
@@ -397,6 +398,12 @@ span {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  border-left: 3px solid transparent;
+  transition: all 0.25s ease-in-out;
+}
+.events__timing:hover {
+  border-color: hsl(327, 97%, 48%);
+  transition: all 0.25s ease-in-out;
 }
 .events__timing--date-time {
   display: flex;
@@ -528,6 +535,15 @@ span {
   color: hsl(0, 0%, 45%);
 }
 
+.testimonials {
+  background-image: linear-gradient(45deg, hsla(253, 82%, 42%, 0.9), hsla(327, 97%, 48%, 0.7));
+}
+.testimonials__mini-title, .testimonials__title, .testimonials__para {
+  color: #fff;
+}
+.testimonials__mini-title::before, .testimonials__mini-title::after {
+  background-color: #fff;
+}
 .testimonials__container--testimonial {
   padding: 3rem;
   background-color: #fff;
@@ -564,6 +580,67 @@ span {
   transition: all 0.25s ease-in-out;
 }
 .testimonials__container--testimonial__info--role {
+  margin-bottom: 0;
+}
+
+.blogs__container--blog {
+  background-color: #fff;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  box-shadow: 2px 2px 15px rgba(115, 115, 115, 0.4);
+  transition: all 0.6s ease-in-out;
+  position: relative;
+}
+.blogs__container--blog:hover {
+  box-shadow: none;
+  transform: scale(0.95);
+  transition: all 0.6s ease-in-out;
+}
+.blogs__container--blog__date {
+  position: absolute;
+  padding: 1.5rem;
+  background-color: hsl(327, 97%, 48%);
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 0.4rem;
+  transition: all 0.25s ease-in-out;
+  top: 5rem;
+  left: 5rem;
+}
+.blogs__container--blog__date span {
+  font-weight: 700;
+}
+.blogs__container--blog__date:hover {
+  background-color: hsl(253, 82%, 42%);
+  transition: all 0.25s ease-in-out;
+}
+.blogs__container--blog__mini-title {
+  color: hsl(253, 82%, 42%);
+  font-size: 2rem;
+  font-weight: 500;
+}
+.blogs__container--blog__title {
+  font-size: 2rem;
+  transition: all 0.25s ease-in-out;
+}
+.blogs__container--blog__title:hover {
+  color: hsl(327, 97%, 48%);
+  transition: all 0.25s ease-in-out;
+}
+.blogs__container--blog__para {
+  color: hsl(0, 0%, 45%);
+}
+.blogs__container--blog__read {
+  align-self: flex-start;
+  background-color: hsl(253, 82%, 42%);
+}
+.blogs__container--blog__read:hover {
+  background-color: hsl(327, 97%, 48%);
+}
+.blogs__container--blog p {
   margin-bottom: 0;
 }
 
