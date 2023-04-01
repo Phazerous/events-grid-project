@@ -1,0 +1,8 @@
+@use '../general-styles/colors' as clrs;
+@use '../general-styles/typography' as type;
+@use '../general-styles/padding' as pad;
+
+.section__subtitle {
+  color: clrs.color-type('2');
+  font-size: type.font-size-st('m');
+}

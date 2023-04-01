@@ -1,0 +1,29 @@
+@use '../general-styles/colors' as clrs;
+@use '../general-styles/typography' as type;
+@use '../general-styles/padding' as pad;
+
+.section__mini-title {
+  color: clrs.color-type('3');
+  font-size: type.font-size-st('sc');
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    content: '';
+    height: 1px;
+    width: 19px;
+    background-color: clrs.color-type('3');
+  }
+
+  &::before {
+    left: -3rem;
+  }
+
+  &::after {
+    right: -3rem;
+  }
+}

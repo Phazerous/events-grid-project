@@ -1,0 +1,44 @@
+@use '../general-styles/colors' as clrs;
+@use '../general-styles/typography' as type;
+@use '../general-styles/padding' as pad;
+
+.about {
+  display: flex;
+  gap: 5rem;
+
+  background-image: url('../images/about/about-bg.png');
+  background-color: clrs.color-type('2');
+  background-size: cover;
+
+  .about__content {
+    flex-basis: 50%;
+    color: clrs.color-type('1');
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
+
+    &--title,
+    &--para,
+    &--date,
+    &--subtitle {
+      color: clrs.color-type('1');
+    }
+
+    &--para {
+      margin-bottom: 0;
+    }
+
+    &--date {
+      font-size: type.font-size-st('sc');
+
+      span {
+        display: inline-block;
+        padding: pad.padding-st-v('s');
+        background-color: clrs.color-theme('2');
+        border-radius: 50%;
+      }
+    }
+  }
+}

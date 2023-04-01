@@ -1,0 +1,9 @@
+@use '../general-styles/colors' as clrs;
+@use '../general-styles/typography' as type;
+@use '../general-styles/padding' as pad;
+
+.section__link {
+  font-size: type.font-size-st('sc');
+  padding: pad.padding-st-v('s') pad.padding-st-h('m');
+  color: clrs.color-theme('1');
+}

@@ -1,0 +1,66 @@
+@use '../general-styles/colors' as clrs;
+@use '../general-styles/typography' as type;
+@use '../general-styles/padding' as pad;
+
+.header {
+  background-image: url('../images/hero/hero-bg.jpg');
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    &--logo {
+      width: 20rem;
+    }
+
+    &--links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+
+      &__link {
+        color: clrs.color-theme('1');
+        font-size: 1.5rem;
+        font-weight: type.font-weight('bold');
+      }
+    }
+
+    &--cta {
+      background-color: clrs.color-link('3');
+    }
+  }
+
+  &__hero {
+    color: clrs.color-theme('1');
+
+    &--location {
+      font-size: type.font-size-st('sc');
+      background-color: rgba(clrs.color-theme('1'), 0.3);
+      padding: pad.padding-st-v('s') pad.padding-st-h('m');
+      border-radius: 0.5rem;
+    }
+
+    &--title {
+      font-size: type.font-size-d('m');
+      font-weight: type.font-weight('bold');
+      text-align: center;
+    }
+
+    &--para {
+      text-align: center;
+      color: clrs.color-type('1');
+    }
+
+    &--cta {
+      background-color: clrs.color-theme('2');
+    }
+  }
+}

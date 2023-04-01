@@ -1,0 +1,12 @@
+@use '../general-styles/colors' as clrs;
+@use '../general-styles/typography' as type;
+
+.section__para {
+  font-size: type.font-size-st('sc');
+  color: clrs.color-type('2');
+  margin-bottom: 5rem;
+
+  span {
+    text-align: center;
+  }
+}

@@ -1,0 +1,10 @@
+@media screen and (max-width: 900px) {
+  .about {
+    flex-direction: column;
+
+    &__image,
+    &__content {
+      flex-basis: 100%;
+    }
+  }
+}
